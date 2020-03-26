@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id = "name">MY NAME IS: </p>
+    
+    <p id = "course">MY COURSES ARE: </p>
+    
+	<p>THE NAME ARE AS FOLLOWS: </p>
+	<div id = "output"></div>
+	
+    <script type="text/javascript">
+	
+		
+        let full_name = "Caleb Jesusegun";
+        let courses = ["C#", "Node.JS", "HTML", "CSS", "DESIGN", "JAVASCRIPT"];
+
+        
+        // console.log("MY NAME IS: " + full_name);
+        // console.log("THE NAME OF MY COURSES ARE: " + courses[0] + ", " + courses[1] + ", " + courses[2] + ", " + courses[3] + ", "
+        // + courses[4] + ", " + courses[5]);
+
+function displayData(){
+        const data = [];
+
+        if(courses.length%2 === 0) {
+
+            for(let i = 0; i<= 200; i++){
+
+                if(i%2 === 0) {
+
+                    data.push(i);
+
+                }
+
+            }
+
+        }
+
+        if(courses.length%2 === 1) {
+
+            for(let i = 1; i<=200; i++){
+
+                if(i%2 === 1) {
+
+                    data.push(i);
+
+                }
+
+            }
+
+        }
+let output = document.getElementById("output");
+let course = document.getElementById("course");
+let name = document.getElementById("name");
+output.textContent = data.join(" ");
+course.textContent += courses.join(", ");
+name.textContent += full_name;
+        // console.log("THE NUMBERS ARE AS FOLLOWS: " + course.textContent);
+}
+
+displayData()
+
+    </script>
+</body>
+</html>
